@@ -23,19 +23,13 @@ Before running the project, you need to have the following installed on your mac
     npm install
     ```
 
-3. **Install Bootstrap**:
-    This project uses Bootstrap for styling, so you need to install it as well:
-    ```bash
-    npm install bootstrap
-    ```
-
-4. **Run the application**:
+3. **Run the application**:
     Once all dependencies are installed, you can run the application with:
     ```bash
     ng serve
     ```
 
-5. **Access the app**:
+4. **Access the app**:
     Open your browser and go to [http://localhost:4200](http://localhost:4200) to see the chat application in action.
 
 ## Additional Notes
