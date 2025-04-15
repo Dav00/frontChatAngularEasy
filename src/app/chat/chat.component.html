@@ -1,0 +1,30 @@
+<div class="container mt-5">
+  <!-- Contenedor de mensajes -->
+  <div class="messages mb-4">
+    <div *ngFor="let msg of messages" class="message mb-2" 
+         [ngClass]="{'user-message bg-primary text-white p-2 rounded': msg.type === 'user', 
+                     'server-message bg-light p-2 rounded': msg.type === 'server'}">
+      {{ msg.text }}
+    </div>
+  </div>
+
+  <!-- Área de entrada de mensaje -->
+  <div class="input-area d-flex">
+    <input
+      [(ngModel)]="newMessage"
+      (keydown.enter)="send()"
+      placeholder="Escribe un mensaje..."
+      class="form-control mr-2"
+    />
+    <button (click)="send()" [disabled]="!newMessage.trim()" class="btn btn-primary">
+      Enviar
+    </button>
+  </div>
+
+  <!-- Modal de error -->
+  <app-error-modal
+    [isVisible]="showErrorModal"
+    [errorMessage]="errorMessage"
+    (close)="closeErrorModal()">
+  </app-error-modal>
+</div>

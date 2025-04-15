@@ -1,0 +1,8 @@
+<div class="modal" *ngIf="isVisible" (click)="closeModal()">
+    <div class="modal-content" (click)="$event.stopPropagation()">
+      <h2>Error</h2>
+      <p>{{ errorMessage }}</p>
+      <button (click)="closeModal()">Cerrar</button>
+    </div>
+  </div>
+  
